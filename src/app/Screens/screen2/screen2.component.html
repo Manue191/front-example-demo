@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card"> 
+        <div class="card-header">
+            <h3>User List</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">First Name</th>
+                        <th class="text-center">Last Name</th>
+                        <th class="text-center">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Usuario of Usuarios" class="text-center">
+                        <td>{{Usuario.fname}}</td>
+                        <td>{{Usuario.lname}}</td>
+                        <td>{{Usuario.email}}</td>
+                        <td>
+                            <button (click)="deleteUsuario(Usuario.id)" class="btn btn-danger" style="margin-right: 1%;" >Delete</button>
+                            <button (click)="updateUsuario(Usuario.id)" class="btn btn-warning" style="margin-left: 1%">Update</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
